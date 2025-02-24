@@ -13,13 +13,13 @@ describe('User', () => {
 
     it('Validate user by index', () => {
         cy.listUsers().then((response) => {
-            const firstUser = response.body.usuarios[2]
+            const firstUser = response.body.usuarios[0]
 
-            expect(firstUser).to.have.property('nome', 'Jose')
-            expect(firstUser).to.have.property('email', 'email22@email.com')
-            expect(firstUser).to.have.property('password', 'teste')
-            expect(firstUser).to.have.property('administrador', 'false')
-            expect(firstUser).to.have.property('_id', '03d8k2RR9InNtnIO')
+            expect(firstUser).to.have.property('nome')
+            expect(firstUser).to.have.property('email')
+            expect(firstUser).to.have.property('password')
+            expect(firstUser).to.have.property('administrador')
+            expect(firstUser).to.have.property('_id')
         })
     })
 

@@ -5,7 +5,7 @@ describe('Login', () => {
     it('Login with valid credentials', () => {
         cy.request({
             method: 'POST',
-            url: 'https://serverest.dev/login',
+            url: '/login',
             headers: {
                 accept: 'application/json',
                 'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ describe('Login', () => {
     it('Login with invalid credentials', () => {
         cy.request({
             method: 'POST',
-            url: 'https://serverest.dev/login',
+            url: '/login',
             headers: {
                 accept: 'application/json',
                 'Content-Type': 'application/json'

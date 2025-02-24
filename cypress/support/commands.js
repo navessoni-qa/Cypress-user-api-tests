@@ -10,7 +10,7 @@ Cypress.Commands.add('createUser', (userData = null) => {
 
     return cy.request({
         method: 'POST',
-        url: 'https://serverest.dev/usuarios',
+        url: '/usuarios',
         headers: {
             accept: 'application/json',
             'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ Cypress.Commands.add('createUser', (userData = null) => {
 Cypress.Commands.add('listUsers', () => {
     return cy.request({
         method: 'GET',
-        url: 'https://serverest.dev/usuarios',
+        url: '/usuarios',
         headers: {
             accept: 'application/json',
         },
@@ -35,7 +35,7 @@ Cypress.Commands.add('listUsers', () => {
 Cypress.Commands.add('listById', (userId) => {
     return cy.request({
         method: 'GET',
-        url: `https://serverest.dev/usuarios/${userId}`, //ao invés de passar ID na URL, deixamos ela dinâmica
+        url: `/usuarios/${userId}`, //ao invés de passar ID na URL, deixamos ela dinâmica
         headers: {
             accept: 'application/json',
         },
@@ -54,7 +54,7 @@ Cypress.Commands.add('updateUser', (userId, userData = null) => {
 
     return cy.request({
         method: 'PUT',
-        url: `https://serverest.dev/usuarios/${userId}`,
+        url: `/usuarios/${userId}`,
         headers: {
             accept: 'application/json',
             'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ Cypress.Commands.add('deleteUser', (userId, userData = null) => {
 
     return cy.request({
         method: 'DELETE',
-        url: `https://serverest.dev/usuarios/${userId}`,
+        url: `/usuarios/${userId}`,
         headers: {
             accept: 'application/json',
             'Content-Type': 'application/json'

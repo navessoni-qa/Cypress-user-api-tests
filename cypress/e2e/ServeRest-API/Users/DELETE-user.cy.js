@@ -57,7 +57,7 @@ describe('Delete User', () => {
     it('Delete user with registered cart', () => {
         cy.request({
             method: 'DELETE',
-            url: 'https://serverest.dev/usuarios/oAv3uh0Zxatsn1wz',
+            url: '/usuarios/oAv3uh0Zxatsn1wz',
             headers: {
                 accept: 'application/json',
                 'Content-Type': 'application/json'

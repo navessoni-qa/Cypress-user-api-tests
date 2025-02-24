@@ -19,7 +19,7 @@ describe('User', () => {
     it('List user with invalid ID', () => {
         cy.request({
             method: 'GET',
-            url: 'https://serverest.dev/usuarios/7kpkYJUIHZjGpFQH',
+            url: '/usuarios/7kpkYJUIHZjGpFQH',
             headers: {
                 accept: 'application/json',
             },
@@ -34,7 +34,7 @@ describe('User', () => {
         cy.deleteUser('userId').then(() => {
             cy.request({
                 method: 'GET',
-                url: 'https://serverest.dev/usuarios/userId',
+                url: '/usuarios/userId',
                 failOnStatusCode: false
             }).then((response) => {
                 expect(response.status).to.eq(400)
